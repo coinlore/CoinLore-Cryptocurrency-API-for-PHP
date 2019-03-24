@@ -13,5 +13,19 @@ composer require "coinlore/cruptocurrency-prices @dev"
 ```
 
 ## License
+```php
+ require_once __DIR__ . '/vendor/autoload.php';
  
+ $client = new \Coinlore\Request();
+ 
+ //Get Bitcoin Info 
+ $coins = $client->getCoin(90); 
+ 
+ //Get coins from 0 to 100
+ $coins = $client->getCoin(0,100); 
+ 
+ print_r($coins);
+
+```
+
 MIT license
