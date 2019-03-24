@@ -1,0 +1,21 @@
+{
+    "name": "coinlore/cruptocurrency-prices",
+    "description": "Simple library for PHP to use coinlore crypto api",
+    "keywords": ["coinlore","bitcoin","cryptocurrency prices","cryptocurrency","prices","ethereum"],
+    "homepage": "https://www.coinlore.com/",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Coinlore",
+            "email": "contact@coinlore.com"
+        }
+    ],
+    "require": {
+        "ext-curl": "*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": { "Coinlore\\": "src/Coinlore" }
+    }
+}
