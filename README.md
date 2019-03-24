@@ -22,7 +22,7 @@ composer require "coinlore/cruptocurrency-prices @dev"
  $coins = $client->getCoin(90); 
  
  //Get coins from 0 to 100
- $coins = $client->getCoin(0,100); 
+ $coins = $client->getCoins(0,100); 
  
  print_r($coins);
 
