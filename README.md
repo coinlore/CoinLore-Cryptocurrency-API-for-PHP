@@ -12,7 +12,7 @@ OR
 composer require "coinlore/cruptocurrency-prices @dev" 
 ```
 
-## License
+## Usage
 ```php
  require_once __DIR__ . '/vendor/autoload.php';
  
@@ -39,5 +39,5 @@ composer require "coinlore/cruptocurrency-prices @dev"
  print_r($coins);
 
 ```
-
+## License
 MIT license
