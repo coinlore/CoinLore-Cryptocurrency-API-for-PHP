@@ -4,6 +4,11 @@ namespace Coinlore;
 
 class Request
 {
+    public function getglobal()
+    {
+        return json_decode($this->curl("https://api.coinlore.com/api/global/"));
+    }
+
     public function getcoin($id)
     {
         return json_decode($this->curl("https://api.coinlore.com/api/ticker/?id=" . $id));
