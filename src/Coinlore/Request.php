@@ -6,7 +6,7 @@ class Request
 {
     public function getcoin($id)
     {
-        return $this->curl("https://api.coinlore.com/api/ticker/?id=" . $id);
+        return json_decode($this->curl("https://api.coinlore.com/api/ticker/?id=" . $id));
     }
 
     public function getcoins($start, $limit)
@@ -17,27 +17,27 @@ class Request
         if (empty($start) || !is_numeric($start)) {
             $start = 0;
         }
-        return $this->curl("https://api.coinlore.com/api/tickers/?start=" . $start . "&limit=" . $limit . "");
+        return json_decode($this->curl("https://api.coinlore.com/api/tickers/?start=" . $start . "&limit=" . $limit . ""));
     }
 
     public function getcoinmarkets($id)
     {
-        return $this->curl("https://api.coinlore.com/api/coin/markets/?id=" . $id);
+        return json_decode($this->curl("https://api.coinlore.com/api/coin/markets/?id=" . $id));
     }
 
     public function getexchanges()
     {
-        return $this->curl("https://api.coinlore.com/api/exchanges/");
+        return json_decode($this->curl("https://api.coinlore.com/api/exchanges/"));
     }
 
     public function getexchange($id)
     {
-        return $this->curl("https://api.coinlore.com/api/exchange/?id=" . $id);
+        return json_decode($this->curl("https://api.coinlore.com/api/exchange/?id=" . $id));
     }
 
     public function getsocialstats($id)
     {
-        return $this->curl("https://api.coinlore.com/api/coin/social_stats/?id=" . $id);
+        return json_decode($this->curl("https://api.coinlore.com/api/coin/social_stats/?id=" . $id));
     }
 
     private function curl($url)
