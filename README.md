@@ -19,10 +19,22 @@ composer require "coinlore/cruptocurrency-prices @dev"
  $client = new \Coinlore\Request();
  
  //Get Bitcoin Info 
- $coins = $client->getCoin(90); 
+ $coins = $client->getcoin(90); 
  
  //Get coins from 0 to 100
- $coins = $client->getCoins(0,100); 
+ $coins = $client->getcoins(0,100); 
+ 
+ //Get coin markets
+ $coins = $client->getcoinmarkets(90); 
+
+ //Get exchanges
+ $coins = $client->getexchanges();   
+ 
+ //Get exchange
+ $coins = $client->getexchange(5);    
+ 
+ //Get social stats
+ $coins = $client->getsocialstats(90);     
  
  print_r($coins);
 
